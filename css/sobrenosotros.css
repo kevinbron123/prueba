@@ -1,0 +1,105 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0%;
+/*     padding: 0%; */
+}
+
+body {
+    background-color: white;
+}
+
+.nav {
+    background-color: yellow; 
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.nav h1{
+    color: white;
+}
+
+header {
+    background-color: #364552;
+    color: white;
+    padding: 0.2rem 0rem;
+}
+
+.container2 h1, h3 {
+    background-color: rgb(255, 166, 0);
+    color: white;
+    padding: 0.4em;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.a {
+    text-decoration: none;
+    color: #000;
+}
+
+.a {
+    text-decoration: none;
+    color: #000;
+}
+
+a.b {
+    width: 32%;
+    padding: 2%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color:#000;
+}
+
+a.b:hover {
+    section article:hover {
+        box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+    }
+}
+
+a b h2, a b p {
+    margin: 1rem;
+}
+
+footer {
+    background-color: #222;
+    padding: 3rem;
+    color: #fff;
+    margin-top:5px;
+}
+
+footer section {
+    float: right;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: cornflowerblue
+}
