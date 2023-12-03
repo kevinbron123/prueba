@@ -31,6 +31,37 @@ header h1 {
     align-items: center;
 }
 
+/* Estilos comunes para todas las pantallas */
+.adaptable {
+    width: 100px;
+}
+
+/* Estilos para pantallas más grandes (por ejemplo, tablets y escritorios) */
+@media only screen and (min-width: 600px) {
+    .adaptable {
+        float: none;
+    }
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, teléfonos) */
+@media only screen and (max-width: 599px) {
+    .adaptable {
+        width: 100%;
+        float: none;
+    }
+}
+
+@keyframes cambioColor {
+    0% { background-color: red; }
+    50% { background-color: yellow; }
+    100% { background-color: green; }
+}
+
+/* Estilos del elemento que se animará */
+.container h2 {
+    animation: cambioColor 3s infinite; /* Aplicación de la animación */
+}
+
 nav li {
     display: inline-block;
     font-size: 20px;
@@ -40,7 +71,7 @@ nav li {
 }
 
 header {
-    background-color: rgb(255, 242, 0);
+    background-color: rgb(255, 166, 0);
     color: white;
     padding: 0.2rem 0rem;
 }
