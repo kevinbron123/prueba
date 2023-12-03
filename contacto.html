@@ -16,35 +16,102 @@
         <li><a href="contacto.html" class="a">Contacto</a></li>
     </ul>
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ejemplo</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
 <body>
     <br>
     <br>
-    <br>
-    <div class="container">
-        <form action="#" target="" method="get" name="formDatosPersonales">
-        <h1>Consulta</h1>
-    
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"/>
-    
-        <label for="apellidos">Apellido</label>
-        <input type="text" name="apellidos" id="apellidos" placeholder="Anota tu apellido"/>
-    
-        <label for="email">Mail</label>
-        <input type="email" name="email" id="email" placeholder="Escribe tu mail" required />
-    
-        <label for="asunto">Asunto</label>
-        <input type ="text" name="asunto" id="asunto" placeholder="Apunta tu asunto"/>
-    
-        <label for="mensaje">Mensaje</label>
-        <textarea name="mensaje" for="mensaje" placeholder="Redacta tu mensaje"></textarea>
+    <form id="miFormulario" onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <span id="errorNombre" class="error"></span>
+        <br>
         
-        <input type="submit" name="enviar" value="Enviar datos">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido">
+        <span id="errorApellido" class="error"></span>
+        <br>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni">
+        <span id="errorDni" class="error"></span>
+        <br>
+
+        <label for="email">Mail:</label>
+        <input type="email" id="email" name="email">
+        <span id="errorEmail" class="error"></span>
+        <br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono">
+        <span id="errorTelefono" class="error"></span>
+        <br>
+
+        <input type="submit" value="Enviar">
     </form>
-    </div>
+
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById('nombre').value;
+            var apellido = document.getElementById('apellido').value;
+            var dni = document.getElementById('dni').value;
+            var email = document.getElementById('email').value;
+            var telefono = document.getElementById('nombre').value;var nombre = document.getElementById('nombre').value;
+
+            if (nombre === "") {
+                document.getElementById('errorNombre').innerHTML = "Por favor, ingresa tu nombre.";
+                return false;
+            } else {
+                document.getElementById('errorNombre').innerHTML = "";
+            }
+
+            if (apellido === "") {
+                document.getElementById('errorApellido').innerHTML = "Por favor, ingresa tu apellido.";
+                return false;
+            } else {
+                document.getElementById('errorApellido').innerHTML = "";
+            }
+            if (dni === "") {
+                document.getElementById('errorDni').innerHTML = "Por favor, ingresa tu DNI.";
+                return false;
+            } else {
+                document.getElementById('errorNombre').innerHTML = "";
+            }
+            if (email === "") {
+                document.getElementById('errorEmail').innerHTML = "Por favor, ingresa tu mail.";
+                return false;
+            } else {
+                document.getElementById('errorEmail').innerHTML = "";
+            }
+            return true;
+            if (telefono === "") {
+                document.getElementById('errorTelefono').innerHTML = "Por favor, ingresa tu teléfono.";
+                return false;
+            } else {
+                document.getElementById('errorTelefono').innerHTML = "";
+            }
+        }
+    </script>
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
 <footer>
         <section>
             <a href="index.html">Ir al comienzo</a>
